@@ -11,10 +11,10 @@ import (
 )
 
 type ProductHandler struct {
-	db db.DB
+	db db.DBInterface
 }
 
-func NewProductHandler(db db.DB) *ProductHandler {
+func NewProductHandler(db db.DBInterface) *ProductHandler {
 	return &ProductHandler{db: db}
 }
 

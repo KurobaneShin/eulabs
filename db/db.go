@@ -8,7 +8,16 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/mysqldialect"
+
+	"github.com/KurobaneShin/eulabs/types"
 )
+
+type DBInterface interface {
+	CreateProduct(product *types.Product) error
+	UpdateProduct(product *types.Product) error
+	GetProductById(id string) (types.Product, error)
+	DeleteProduct(id string) error
+}
 
 type DB struct {
 	*bun.DB

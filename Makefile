@@ -21,3 +21,6 @@ migration-new:
 
 db-seed:
 	go run ./cmd/seed/main.go
+
+test:
+	@go test -v ./...
