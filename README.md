@@ -1,4 +1,4 @@
-##Run the database
+## Run the database
 ```
 docker compose up -d
 ```
